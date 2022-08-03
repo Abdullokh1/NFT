@@ -42,6 +42,20 @@ a {
   text-decoration: none;
 }
 
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3162ff;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
 .navbar {
   width: 84px;
   height: 94vh;
