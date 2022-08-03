@@ -1,0 +1,57 @@
+.navbar{
+  width: 84px;
+  height: 94vh;
+  background: #fff;
+  box-shadow: 5px 6px 19px rgba(62, 72, 118, 0.04);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+
+  button{
+    stroke: #555;
+
+    &:hover{
+      stroke: $primary-color;
+    }
+  }
+
+}
+
+.navbar__list{
+  width: 100%;
+  margin: 0 auto;
+  
+  li{
+   position: relative;
+
+    svg{
+     stroke: #666;
+    }
+
+   &:hover{
+    svg{
+      stroke: $primary-color;
+    }
+   }
+  
+    &:not(:last-child){
+      margin-bottom: 44px;
+    }
+   
+  }
+}
+
+.active-icon{
+  position: absolute;
+  left: 69px;
+  margin-top: -5px;
+  width: 15px;
+  height: 40px;
+  border-radius: 0% 100% 100% 0% / 44% 53% 47% 36% ;
+  transform: rotate(-180deg);
+  background-color: $primary-color;
+}

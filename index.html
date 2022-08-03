@@ -1,23 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/flexboxgrid.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
-    />
-    <link rel="stylesheet" href="css/main.min.css" />
-  </head>
 
-  <body>
-    <script src="js/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NFT</title>
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+  <link rel="stylesheet" href="css/main.min.css" />
+</head>
+
+<body>
+
+  <div class="d-flex justify-content-between">
+    <nav class="navbar">
+      <a href="#">
+        <img src="./images/logo.svg" alt="logo">
+      </a>
+
+      <ul class="navbar__list">
+        <div>
+          <img class="active-icon" src="./images/active.jpg" alt="active" width="20" height="50">
+        </div>
+        <li>
+          <a href="#">
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M14.8946 2.75188C15.1758 2.99109 15.4396 3.21563 15.6811 3.41C16.1511 3.84592 16.5668 4.21189 16.9339 4.53519C19.1483 6.48506 19.6001 6.88287 19.6001 11.713C19.6001 20 17.6411 20 10.0141 20C2.3871 20 0.428097 20 0.428097 11.713C0.428097 6.88226 0.879244 6.48496 3.09416 4.53445C3.46108 4.21133 3.8764 3.84559 4.3461 3.41C4.57214 3.22795 4.81826 3.02046 5.08002 2.79978C6.50776 1.5961 8.40098 0 10.0421 0C11.6607 0 13.4922 1.55854 14.8946 2.75188ZM12.9214 13.3855C13.3356 13.3855 13.6714 13.7213 13.6714 14.1355C13.6714 14.5497 13.3356 14.8855 12.9214 14.8855H7.10639C6.69217 14.8855 6.35639 14.5497 6.35639 14.1355C6.35639 13.7213 6.69217 13.3855 7.10639 13.3855H12.9214Z"
+                fill="#3162FF" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M15.7123 8.27212C16.0398 8.52582 16.0995 8.99692 15.8458 9.32434L12.9168 13.1043C12.7945 13.2622 12.6142 13.3648 12.416 13.3893C12.2178 13.4138 12.018 13.3582 11.8609 13.2349L9.04249 11.0225L6.51133 14.3114C6.2587 14.6396 5.7878 14.701 5.45954 14.4483C5.13129 14.1957 5.06998 13.7248 5.32261 13.3965L8.31561 9.50754C8.43769 9.34892 8.6181 9.24567 8.81671 9.22079C9.01532 9.1959 9.21563 9.25143 9.37308 9.37502L12.1934 11.589L14.6601 8.40558C14.9138 8.07816 15.3849 8.01841 15.7123 8.27212Z"
+                fill="#070721" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M18.6671 2.1001C18.0193 2.1001 17.4951 2.62431 17.4951 3.2721C17.4951 3.91914 18.0196 4.4441 18.6671 4.4441C19.3147 4.4441 19.8391 3.91914 19.8391 3.2721C19.8391 2.62431 19.3149 2.1001 18.6671 2.1001ZM15.9951 3.2721C15.9951 1.79588 17.1909 0.600098 18.6671 0.600098C20.1433 0.600098 21.3391 1.79588 21.3391 3.2721C21.3391 4.74706 20.1436 5.9441 18.6671 5.9441C17.1907 5.9441 15.9951 4.74706 15.9951 3.2721Z"
+                fill="#070721" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.00342 4.60693C2.78045 5.82991 2.19946 7.87608 2.19946 11.303C2.19946 14.7304 2.78046 16.7765 4.0034 17.9994C5.22635 19.2222 7.2725 19.803 10.6995 19.803C14.127 19.803 16.1731 19.2222 17.3959 17.9994C18.6187 16.7766 19.1995 14.7305 19.1995 11.303C19.1995 10.1973 19.1397 9.22783 19.0136 8.37922C18.9527 7.96951 19.2355 7.58801 19.6452 7.52712C20.0549 7.46624 20.4364 7.74902 20.4973 8.15874C20.6372 9.10013 20.6995 10.1467 20.6995 11.303C20.6995 14.8135 20.1242 17.3924 18.4565 19.0601C16.7889 20.7277 14.21 21.303 10.6995 21.303C7.18943 21.303 4.61058 20.7277 2.94278 19.0601C1.27497 17.3924 0.699463 14.8135 0.699463 11.303C0.699463 7.79288 1.27498 5.21405 2.94276 3.54627C4.61054 1.8785 7.18936 1.30298 10.6995 1.30298C11.8345 1.30298 12.8631 1.36321 13.7902 1.49775C14.2001 1.55724 14.4842 1.93777 14.4247 2.34769C14.3652 2.75761 13.9847 3.04169 13.5747 2.9822C12.7379 2.86075 11.7844 2.80298 10.6995 2.80298C7.27256 2.80298 5.22639 3.38396 4.00342 4.60693Z"
+                fill="#070721" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.96118 15.5167V12.8887" stroke stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M19.0895 10.4775L19.0605 10.4985C16.6385 11.9905 13.4405 12.8915 9.95652 12.8915C6.47252 12.8915 3.28352 11.9905 0.86252 10.4985L0.83252 10.4775"
+                stroke stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M9.96124 4.14771C16.8702 4.14771 19.1722 6.19871 19.1722 12.3507C19.1722 18.5027 16.8702 20.5537 9.96124 20.5537C3.05324 20.5537 0.750244 18.5027 0.750244 12.3507C0.750244 6.19871 3.05324 4.14771 9.96124 4.14771Z"
+                stroke stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M13.2239 4.3692V3.7392C13.2239 2.4752 12.3009 1.4502 11.1639 1.4502H8.75885C7.62185 1.4502 6.69885 2.4752 6.69885 3.7392V4.3692"
+                stroke stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.2412 2.51322C14.6229 1.99411 12.6669 2.40045 11.6769 3.90204C11.5414 4.10761 11.3136 4.23357 11.0674 4.23903C10.8213 4.2445 10.5881 4.12879 10.4436 3.92944C9.36482 2.44148 7.43956 2.00038 5.85112 2.51297L5.85057 2.51315C2.86206 3.47505 1.64144 7.11164 2.63592 10.2171C3.43565 12.7059 5.18475 14.6051 6.96258 15.891C7.8486 16.5319 8.72769 17.0098 9.4726 17.3251C10.2422 17.6508 10.7964 17.7722 11.0508 17.7722C11.3032 17.7722 11.8593 17.6484 12.6345 17.3173C13.3841 16.9972 14.2686 16.5133 15.1582 15.8683C16.9444 14.5731 18.6897 12.6747 19.4613 10.2212L19.4625 10.2176C20.4558 7.11343 19.2298 3.47561 16.2412 2.51322ZM11.0299 2.32661C12.5585 0.772794 14.8831 0.502092 16.6999 1.08508L16.7006 1.08531C20.7432 2.38683 22.0413 7.07755 20.8917 10.673C19.993 13.5286 17.9902 15.6676 16.0387 17.0827C15.0591 17.7929 14.077 18.3323 13.2237 18.6968C12.396 19.0503 11.6129 19.2722 11.0508 19.2722C10.4912 19.2722 9.71303 19.0557 8.88797 18.7065C8.03826 18.3469 7.06047 17.8131 6.08349 17.1064C4.13539 15.6974 2.13405 13.5587 1.20774 10.6756L1.20753 10.675C0.0562391 7.08057 1.34558 2.3875 5.3908 1.08535M11.0299 2.32661C9.48093 0.838135 7.23439 0.49063 5.391 1.08529L11.0299 2.32661Z"
+                fill="#070721" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M14.0424 5.48732C14.0847 5.07527 14.4531 4.77556 14.8651 4.81789C15.6576 4.89931 16.3375 5.26256 16.8047 5.85339C17.2671 6.43809 17.4824 7.19508 17.455 8.01112C17.4411 8.4251 17.0943 8.74943 16.6803 8.73554C16.2663 8.72165 15.942 8.37479 15.9559 7.96081C15.9735 7.43584 15.8338 7.04384 15.6282 6.78379C15.4274 6.52986 15.1263 6.35262 14.7118 6.31004C14.2998 6.2677 14 5.89936 14.0424 5.48732Z"
+                fill="#070721" />
+            </svg>
+
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.3638 5.86985C14.3638 3.48385 12.4298 1.54985 10.0438 1.54985C7.65783 1.53885 5.71583 3.46485 5.70483 5.85085V5.86985"
+                stroke stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12.9727 10.3738H12.9267" stroke stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M7.14164 10.3738H7.09564" stroke stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1.31619 13.0224C-0.149813 7.58842 2.79119 5.55542 10.0342 5.55542C17.2772 5.55542 20.2182 7.58842 18.7522 13.0224C17.2912 18.4394 16.5422 20.4894 10.0342 20.4894C3.52619 20.4894 2.77719 18.4394 1.31619 13.0224Z"
+                stroke stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10 19.25C16.937 19.25 19.25 16.937 19.25 10C19.25 3.063 16.937 0.75 10 0.75C3.063 0.75 0.75 3.063 0.75 10C0.75 16.937 3.063 19.25 10 19.25Z"
+                stroke stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M13.39 12.018L9.99902 9.99503V5.63403" stroke stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <button>
+        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12.5 11C12.5 12.3809 11.3809 13.5 10 13.5C8.61912 13.5 7.5 12.3809 7.5 11C7.5 9.61912 8.61912 8.5 10 8.5C11.3809 8.5 12.5 9.61912 12.5 11Z"
+            stroke stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M18.168 6.25025C17.4845 5.05799 15.9712 4.65004 14.7885 5.33852C13.7598 5.93613 12.4741 5.18838 12.4741 3.99218C12.4741 2.61619 11.3659 1.5 9.99976 1.5C8.63365 1.5 7.52546 2.61619 7.52546 3.99218C7.52546 5.18838 6.23977 5.93613 5.21199 5.33852C4.02829 4.65004 2.51507 5.05799 1.83153 6.25025C1.14896 7.4425 1.55399 8.96665 2.73769 9.65415C3.76546 10.2527 3.76546 11.7473 2.73769 12.3459C1.55399 13.0343 1.14896 14.5585 1.83153 15.7498C2.51507 16.942 4.02829 17.35 5.21101 16.6625H5.21199C6.23977 16.0639 7.52546 16.8116 7.52546 18.0078C7.52546 19.3838 8.63365 20.5 9.99976 20.5C11.3659 20.5 12.4741 19.3838 12.4741 18.0078C12.4741 16.8116 13.7598 16.0639 14.7885 16.6625C15.9712 17.35 17.4845 16.942 18.168 15.7498C18.8515 14.5585 18.4455 13.0343 17.2628 12.3459H17.2618C16.2341 11.7473 16.2341 10.2527 17.2628 9.65415C18.4455 8.96665 18.8515 7.4425 18.168 6.25025Z"
+            stroke stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </nav>
+
+    <section class="main w-100 ms-5 pt-4">
+      <div class="main__input-wrapper">
+        <img class="main__search" src="./images/search.svg" alt="search">
+        <input class="main__input" type="text" placeholder="Search">
+      </div>
+
+      <div class="main__banner">
+        <h1>Discover, collect, sell <br> and create your own NFTs</h1>
+        <a class="main__banner-link me-2" href="#">Discover Now</a>
+        <a class="main__banner-link" href="#">Create Your Own</a>
+        <img class="main__img" src="./images/hero-img.png" alt="hero-img">
+        <img class="main__img-top" src="./images/hero-img-top.png" alt="hero-img-top">
+        <img class="main__img-bottom" src="./images/hero-img-bottom.png" alt="hero-img-bottom">
+      </div>
+
+      <div class="trend">
+        <div class="trend__inner d-flex justify-content-between">
+          <h3 class="trend__title">Trending NFTs</h3>
+          <a href="#">View all</a>
+        </div>
+
+        <ul class="trend__categories d-flex justify-content-between">
+          <li>
+            <button>
+              <img src="./images/Fire.svg" alt="fire">
+              Trending
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./images/art.svg" alt="art">
+              Art
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./images/game.svg" alt="game">
+              Game
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./images/art.svg" alt="art">
+              Fashion
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./images/Guitar.svg" alt="Guitar">
+              Music
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./images/Camera.svg" alt="Camera">
+              Photography
+            </button>
+          </li>
+        </ul>
+
+        <ul class="trend__cards cards d-flex justify-content-between">
+          <li>
+            <div class="cards__img">
+              <button class="cards__wishlist"><img src="./images/Heart.svg" alt="heart"></button>
+              <button class="cards__info">
+                <img class="me-2" src="./images/silver.svg" alt="silver"> <strong class="me-1">4.5</strong> ETH
+              </button>
+            </div>
+            <div class="cards__user p-3 pb-0 d-flex flex-column justify-content-end">
+              <div class="d-flex">
+                <div class="flex-grow-1">
+                  <h4>Luciana Hakis</h4>
+                  <p>Rohan Vincent</p>
+                </div>
+                <img src="./images/user-1.svg" alt="user-1">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="cards__img cards__img-second">
+              <button class="cards__wishlist"><img src="./images/Heart.svg" alt="heart"></button>
+              <button class="cards__info">
+                <img class="me-2" src="./images/silver.svg" alt="silver"> <strong class="me-1">4.5</strong> ETH
+              </button>
+            </div>
+            <div class="cards__user p-3 pb-0 d-flex flex-column justify-content-end">
+              <div class="d-flex">
+                <div class="flex-grow-1">
+                  <h4>Sunny Evana</h4>
+                  <p>Mira Russell</p>
+                </div>
+                <img src="./images/user-2.svg" alt="user-2">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="cards__img cards__img-third">
+              <button class="cards__wishlist"><img src="./images/Heart.svg" alt="heart"></button>
+              <button class="cards__info">
+                <img class="me-2" src="./images/silver.svg" alt="silver"> <strong class="me-1">4.5</strong> ETH
+              </button>
+            </div>
+            <div class="cards__user p-3 pb-0 d-flex flex-column justify-content-end">
+              <div class="d-flex">
+                <div class="flex-grow-1">
+                  <h4>Rena Hussy</h4>
+                  <p>Caprice Armstrong</p>
+                </div>
+                <img src="./images/user-3.svg" alt="user-3">
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="trend__inner trend__inner-second  d-flex justify-content-between ">
+          <h3 class="trend__title">Top Creators</h3>
+          <a href="#">View all</a>
+        </div>
+
+        <div class="creators d-flex">
+          <div class="creators__item d-flex align-items-center col-6">
+            <img src="./images/creator-1.svg" alt="creator">
+            <div class="ms-2 flex-grow-1">
+              <h4>Aysha Murillo</h4>
+              <p class="m-0">@ayshamurillo</p>
+            </div>
+            <a class="creators__link" href="#">
+              <img class="me-2" src="./images/follow.svg" alt="follow">
+              Follow
+            </a>
+          </div>
+          <div class="creators__item d-flex align-items-center col-6">
+            <img src="./images/creator-2.svg" alt="creator">
+            <div class="ms-2 flex-grow-1">
+              <h4>Leigha Montes</h4>
+              <p class="m-0">@leighamontes</p>
+            </div>
+            <a class="creators__link" href="#">
+              <img class="me-2" src="./images/follow.svg" alt="follow">
+              Follow
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="sidebar w-50">
+      <div class="d-flex align-items-center">
+        <div class="sidebar__btn-wrapper">
+          <button class="sun-btn">
+            <img src="./images/sun.svg" alt="sun">
+          </button>
+          <button class="moon-btn">
+            <img src="./images/moon.svg" alt="moon">
+          </button>
+          <span class="active-btn"></span>
+        </div>
+
+        <button class="sidebar__notification">
+          <img src="./images/notification.svg" alt="notification">
+        </button>
+
+        <div class="sidebar__profile">
+          <h5>Samelina</h5>
+          <p>Creator <span class="text-warning">Pro+</span></p>
+        </div>
+        <img src="./images/profile-img.svg" alt="profile-img">
+      </div>
+
+      <div class="balance">
+        <p>Balance</p>
+        <span>$96,720.00</span>
+        <img src="./images/balance.svg" alt="balance" width="380">
+        <ul class="balance__date d-flex justify-content-between w-100">
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+          <li>Sun</li>
+        </ul>
+      </div>
+
+      <div class="activity">
+        <div class="d-flex justify-content-between mb-3">
+          <h4 class="activity__title">Recent Activity</h4>
+          <a href="#">View all</a>
+        </div>
+
+        <ul class="activity__list">
+          <li class="d-flex align-items-center">
+            <img src="./images/activity-1.svg" alt="activity-1">
+            <div class="activity__list-info flex-grow-1">
+              <h5>Annie Patel</h5>
+              <p>Bought by for <span class="text-primary fw-bolder">0.09 ETH</span></p>
+            </div>
+            <p class="activity__time m-0">15m ago</p>
+          </li>
+          <li class="d-flex align-items-center">
+            <img src="./images/activity-2.svg" alt="activity-2">
+            <div class="activity__list-info flex-grow-1">
+              <h5>Frida Cordova</h5>
+              <p>Bought by for <span class="text-primary fw-bolder">0.09 ETH</span></p>
+            </div>
+            <p class="activity__time m-0">15m ago</p>
+          </li>
+          <li class="d-flex align-items-center">
+            <img src="./images/activity-3.svg" alt="activity-3">
+            <div class="activity__list-info flex-grow-1">
+              <h5>Madelyn Steadman</h5>
+              <p>Bought by for <span class="text-primary fw-bolder">0.06 ETH</span></p>
+            </div>
+            <p class="activity__time m-0">15m ago</p>
+          </li>
+          <li class="d-flex align-items-center">
+            <img src="./images/activity-4.svg" alt="activity-4">
+            <div class="activity__list-info flex-grow-1">
+              <h5>Daniele Bullock</h5>
+              <p>Bought by for <span class="text-primary fw-bolder">0.09 ETH</span></p>
+            </div>
+            <p class="activity__time m-0">15m ago</p>
+          </li>
+          <li class="d-flex align-items-center">
+            <img src="./images/activity-5.svg" alt="activity-5">
+            <div class="activity__list-info flex-grow-1">
+              <h5>Bryony Avila</h5>
+              <p>Bought by for <span class="text-primary fw-bolder">0.03 ETH</span></p>
+            </div>
+            <p class="activity__time m-0">15m ago</p>
+          </li>
+          <li class="d-flex align-items-center">
+            <img src="./images/activity-6.svg" alt="activity-6">
+            <div class="activity__list-info flex-grow-1">
+              <h5>Poppy Chan</h5>
+              <p>Bought by for <span class="text-primary fw-bolder">0.04 ETH</span></p>
+            </div>
+            <p class="activity__time m-0">15m ago</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
